@@ -1,0 +1,25 @@
+<div id="profile">
+    <div *ngIf="!isClicked" class="d-flex justify-content-center align-items-center flex-column">
+        <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="NO image">
+        <button (click)="clickBtn()" class="mt-2 btn" href="">Edit admin details <i class="fa-solid fa-pen-nib"></i></button>
+    </div>
+    <div *ngIf="isClicked" id="editprofile" class="w-100">
+        <p class="fw-bold ">Update Admin Details</p>
+        <label for="profileIMg">
+            <input type="file" id="profileIMg" style="display: none;">
+            <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg" alt="NO image">
+        </label>
+        <form class="px-4 w-100">
+            <div class="mt-2">
+                <input name="username" [(ngModel)]="empDetails.empUsername" placeholder="Admin Name" class="form-control" type="text">
+            </div>
+            <div class="mt-2">
+                <input name="password" [(ngModel)]="empDetails.password" placeholder="password" class="form-control" type="text">
+            </div>
+            <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-danger" (click)="Cancel()">Cancel</button>
+                <button class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

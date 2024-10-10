@@ -1,0 +1,9 @@
+
+#sidebar{
+    width: 200px;
+    background-color:  rgb(3, 3, 73);
+    height: 100vh;
+}
+.my-pagination ::ng-deep .ngx-pagination .current {
+    background: red;
+}
